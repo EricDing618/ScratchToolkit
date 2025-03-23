@@ -1,7 +1,7 @@
 loguru==0.7.2
 cairosvg==2.7.1
 pillow==9.5.0
-pygame-ce==2.5.2
+# pygame-ce==2.5.2
 numpy==1.26.2
 colorama==0.4.6
 js2py==0.74
