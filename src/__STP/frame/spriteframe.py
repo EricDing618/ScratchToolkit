@@ -3,22 +3,65 @@ import sys,math,random
 from threading import Timer,Thread
 from numpy import where,array
 
-class JSObject:
-    def __init__(self,obj):
-        self.obj=obj
-    def __eq__(self,other):
-        return str(self.obj)==str(other.obj)
-    def __ne__(self,other):
-        return str(self.obj)!=str(other.obj)
-    def __add__(self,other):
-        if isinstance(self.obj,str) or isinstance(other.obj,str):
-            return str(self.obj)+str(other.obj)
-        else:
-            return float(self.obj)+(other.obj)
-    def __str__(self):
-        return str(self.obj)
+class T:
+    def __init__(self, value):
+        self.value = value
+
+    # 隐式转换核心逻辑
+    def _to_number(self, x):
+        if isinstance(x, T):
+            x = x.value
+        if isinstance(x, bool):
+            return 1.0 if x else 0.0
+        try:
+            return float(x)
+        except (ValueError, TypeError):
+            return 0.0  # 所有无效转换返回 0
+
+    def _to_string(self, x):
+        if isinstance(x, T):
+            x = x.value
+        return str(x)
+
+    # 重载操作符
+    def __add__(self, other):
+        # Scratch 的 +：优先字符串拼接
+        if isinstance(self.value, str) or isinstance(other, str):
+            return T(self._to_string(self.value) + self._to_string(other))
+        return T(self._to_number(self.value) + self._to_number(other))
+
+    def __sub__(self, other):
+        # Scratch 的 -：强制转数字
+        return T(self._to_number(self.value) - self._to_number(other))
+
+    def __mul__(self, other):
+        # Scratch 的 *：强制转数字
+        return T(self._to_number(self.value) * self._to_number(other))
+
+    def __truediv__(self, other):
+        # Scratch 的 /：强制转数字，除零返回 inf
+        return T(self._to_number(self.value) / self._to_number(other))
+
+    # 比较操作符
+    def __eq__(self, other):
+        # Scratch 的 ==：松散比较
+        if isinstance(other, T):
+            other = other.value
+        return self.value == other
+
+    # 类型转换方法
+    def as_number(self):
+        return self._to_number(self.value)
+
+    def as_string(self):
+        return self._to_string(self.value)
+
     def __repr__(self):
-        return str(self.obj)
+        return f"T({repr(self.value)})"
+
+    # 支持布尔上下文（if 语句）
+    def __bool__(self):
+        return bool(self.value)
     
 class Sprite(pg.sprite.Sprite,Thread): #角色框架
     def __init__(self, image_file:tuple[str], initxy:tuple[int,int], direction:int):
