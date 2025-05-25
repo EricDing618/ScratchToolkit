@@ -2,7 +2,7 @@ from .config import USERSET,json,SPRITE_INIT_CODE,GAME_INIT_CODE,HEAD,Any,Union,
 init_path()
 from .mypath import log,UnPackingScratch3File,PathTool
 from .spectype import FuncParser,BlockBuffer,InputParser,VarListParser
-from src.util import *
+from scratchtoolkit.util import *
 
 class CodeParser(Data):
     def __init__(self,last:UnPackingScratch3File):

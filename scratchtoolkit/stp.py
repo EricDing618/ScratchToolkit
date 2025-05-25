@@ -34,7 +34,7 @@ Scratch-To-Pygame({USERSET['info']['version']}) is running!
                     if os.system(f'{sys.executable} -m pip install {i}'):
                         error=True
                 if not error:
-                    log.success(f'Package {i} installed successfully.')
+                    log.success(f'Package/module {i} installed successfully.')
                 else:
                     log.error(f'Failed to install {i}.')
             log.debug('Trying to run the output file...')
