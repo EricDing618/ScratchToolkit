@@ -7,4 +7,4 @@ colorama==0.4.6
 js2py==0.74
 art==6.4
 pytest==8.3.4
-pytest-time==2.4.0
+pytest-timeout==2.4.0
