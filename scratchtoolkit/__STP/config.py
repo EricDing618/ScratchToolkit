@@ -19,10 +19,10 @@ log.remove()
 THISPATH=os.getcwd()
 LOCALDATE=time.strftime('%Y-%m-%d_%H：%M',time.localtime(time.time()))
 LOGFORMAT="<level>[{time:YYYY-MM-DD HH:mm:ss}] [{level}]: {message}</level>"
-if os.path.basename(THISPATH) != "STP":
-    os.chdir('./src/__STP')
+'''if os.path.basename(THISPATH) != "STP":
+    os.chdir('./src/scratchtoolkit/__STP')'''
 
-with open("./frame/spriteframe.py","r",encoding="utf-8") as f:
+with open("./scratchtoolkit/__STP/frame/spriteframe.py","r",encoding="utf-8") as f:
     SPRITE_INIT_CODE='\n'.join([i.rstrip() for i in f.readlines() if 'import' not in i])
 with open("./frame/gameframe.py","r",encoding="utf-8") as f:
     GAME_INIT_CODE='\n'.join([i.rstrip() for i in f.readlines() if 'import' not in i])

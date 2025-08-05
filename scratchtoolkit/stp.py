@@ -2,54 +2,55 @@ import traceback
 import argparse as ap
 from art import text2art
 
-def main(fp:str='./tests/work1.sb3',args=None):
-    if args:
-        log.debug(f'''
-==========================
-{text2art('STP')}==========================
-Scratch-To-Pygame({USERSET['info']['version']}) is running!
-    ''')
-        info=UnPackingScratch3File(fp)
-        info.convert()
-        start=time.time()
-        parser=CodeParser(info)
-        parser.write_result()
-        codetree=parser.code_tree()
-        log.success(f"Converted successfully (in {repath(parser.outpyfile)}) .")
-        log.success(f"Time used: {time.time()-start}s") #仅为积木转换时间，不包括解压缩及资源格式转换时间，与积木数量有关
-        if args.tree:
-            log.debug('Showing the code tree...')
-            for i,j in codetree.items():
-                j=json.dumps(j,indent=2,ensure_ascii=False)
-                log.debug(f'{i}: {j}\n')
-        if args.tree_path:
-            with open(args.tree_path,'w',encoding='utf-8') as f:
-                json.dump(codetree,f,indent=4,ensure_ascii=False)
-            log.debug(f'The code tree was saved in {args.tree_path}')
-        if args.run:
-            for i in codetree['requirements']:
-                error=False
-                if not installed(i):
-                    log.debug(f'Installing {i}...')
-                    if os.system(f'{sys.executable} -m pip install {i}'):
-                        error=True
-                if not error:
-                    log.success(f'Package/module {i} installed successfully.')
-                else:
-                    log.error(f'Failed to install {i}.')
-            log.debug('Trying to run the output file...')
-            if os.system(f'python {parser.outpyfile}'):
-                log.error('There is something wrong above.')
-            else:
-                log.success('The file has no wrong.')
-        if args.save_log:
-            log.debug(f'The log was written in {repath(LOGPATH)}')
 
-if __name__=='__main__':
-    from __STP.mypath import PathTool,repath,LOGDIR,LOGPATH
-    from __STP.reg import log,UnPackingScratch3File,CodeParser
-    from __STP.config import os,sys,LOGFORMAT,USERSET,json,time
-    from util import BlockID,installed
+def main():
+    def _start(fp:str='./tests/work1.sb3',args=None,):
+        if args:
+            log.debug(f'''
+    ==========================
+    {text2art('STP')}==========================
+    Scratch-To-Pygame({USERSET['info']['version']}) is running!
+        ''')
+            info=UnPackingScratch3File(fp)
+            info.convert()
+            start=time.time()
+            parser=CodeParser(info)
+            parser.write_result()
+            codetree=parser.code_tree()
+            log.success(f"Converted successfully (in {repath(parser.outpyfile)}) .")
+            log.success(f"Time used: {time.time()-start}s") #仅为积木转换时间，不包括解压缩及资源格式转换时间，与积木数量有关
+            if args.tree:
+                log.debug('Showing the code tree...')
+                for i,j in codetree.items():
+                    j=json.dumps(j,indent=2,ensure_ascii=False)
+                    log.debug(f'{i}: {j}\n')
+            if args.tree_path:
+                with open(args.tree_path,'w',encoding='utf-8') as f:
+                    json.dump(codetree,f,indent=4,ensure_ascii=False)
+                log.debug(f'The code tree was saved in {args.tree_path}')
+            if args.run:
+                for i in codetree['requirements']:
+                    error=False
+                    if not installed(i):
+                        log.debug(f'Installing {i}...')
+                        if os.system(f'{sys.executable} -m pip install {i}'):
+                            error=True
+                    if not error:
+                        log.success(f'Package/module {i} installed successfully.')
+                    else:
+                        log.error(f'Failed to install {i}.')
+                log.debug('Trying to run the output file...')
+                if os.system(f'python {parser.outpyfile}'):
+                    log.error('There is something wrong above.')
+                else:
+                    log.success('The file has no wrong.')
+            if args.save_log:
+                log.debug(f'The log was written in {repath(LOGPATH)}')
+
+    from .__STP.mypath import PathTool,repath,LOGDIR,LOGPATH
+    from .__STP.reg import log,UnPackingScratch3File,CodeParser
+    from .__STP.config import os,sys,LOGFORMAT,USERSET,json,time
+    from scratchtoolkit.__STP.util import BlockID,installed
 
     log.add(sys.stdout,colorize=True,format=LOGFORMAT)
     parser=ap.ArgumentParser(description="The command list of Scratch-To-Pygame")
@@ -76,3 +77,6 @@ if __name__=='__main__':
         except BaseException:
             exc=traceback.format_exc()
             log.error('\n'+exc)
+
+if __name__=='__main__':
+    main()
