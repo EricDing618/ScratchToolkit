@@ -1,1 +1,3 @@
-pygame
+pygame-ce
+js2py
+numpy

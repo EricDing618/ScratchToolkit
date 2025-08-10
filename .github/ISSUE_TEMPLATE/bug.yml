@@ -8,7 +8,7 @@ body:
     label: "检查项"
     description: "请逐个检查下列项目，并勾选确认。"
     options:
-    - label: "**我所使用的是Scratch3/Turbowarp。**"
+    - label: "**在Turbowarp上可以完美复现。**"
       required: true
     - label: "**我没有用到任何第三方扩展和不支持的功能（见 [README.md](https://github.com/EricDing618/ScratchToolkit/blob/main/README.md) ）。**"
       required: true

@@ -33,13 +33,18 @@ python ./src/stp.py -c <目标.sb3文件路径>
 ```bash
 python ./src/stp.py -c ./../../tests/allblocks.sb3 --run -sl --tree -st
 ```
-### 将不考虑支持以下功能：
-- 变量、列表显示功能
-- 云变量功能
-- “说”“思考”“询问...并等待”显示功能（或考虑使用`print()`及`input()`函数）
-- 除画笔、音乐以外的Scratch3扩展功能  
 
-（注：你可以提交建议添加这些功能的Issue，但[EricDing618](https://github.com/EricDing618)可能不会添加，需要等待他人的PR。）
+> [!WARNING]
+> - 将不考虑支持以下功能：
+>   - 变量、列表显示功能
+>   - 云变量功能
+>   - “说”“思考”“询问...并等待”显示功能（或考虑使用`print()`及`input()`函数）
+>   - 除画笔、音乐以外的Scratch3扩展功能  
+>  - 作者将只在turbowarp上进行测试，任何在scratch3上出现但在turbowarp上没有的问题请等待他人解答
+
+> [!TIP]
+> 你可以提交Issue，但[EricDing618](https://github.com/EricDing618)可能会忽略它，需要等待他人的PR。
+
 ## pack.py
 ### 描述
 - pack.py是一个将解包后的Scratch项目还原的脚本。

@@ -46,7 +46,7 @@
             "lists": {},
             "broadcasts": {},
             "blocks": {
-                "?": {
+                "u": {
                     "opcode": "event_whenflagclicked",
                     "next": "e",
                     "parent": null,
@@ -54,13 +54,14 @@
                     "fields": {},
                     "shadow": false,
                     "topLevel": true,
-                    "x": 459,
-                    "y": 208
+                    "x": 867,
+                    "y": 208,
+                    "comment": "ac"
                 },
-                "q": {
+                "v": {
                     "opcode": "motion_movesteps",
-                    "next": "s",
-                    "parent": "r",
+                    "next": "x",
+                    "parent": "w",
                     "inputs": {
                         "STEPS": [
                             1,
@@ -74,10 +75,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "s": {
+                "x": {
                     "opcode": "motion_turnright",
-                    "next": "t",
-                    "parent": "q",
+                    "next": "y",
+                    "parent": "v",
                     "inputs": {
                         "DEGREES": [
                             1,
@@ -91,10 +92,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "t": {
+                "y": {
                     "opcode": "motion_turnleft",
-                    "next": "u",
-                    "parent": "s",
+                    "next": "z",
+                    "parent": "x",
                     "inputs": {
                         "DEGREES": [
                             1,
@@ -108,24 +109,24 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "u": {
+                "z": {
                     "opcode": "motion_goto",
                     "next": null,
-                    "parent": "t",
+                    "parent": "y",
                     "inputs": {
                         "TO": [
                             1,
-                            "@"
+                            "ad"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "@": {
+                "ad": {
                     "opcode": "motion_goto_menu",
                     "next": null,
-                    "parent": "u",
+                    "parent": "z",
                     "inputs": {},
                     "fields": {
                         "TO": [
@@ -136,7 +137,7 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "v": {
+                "A": {
                     "opcode": "motion_gotoxy",
                     "next": "g",
                     "parent": "f",
@@ -162,8 +163,8 @@
                 },
                 "g": {
                     "opcode": "motion_glideto",
-                    "next": "w",
-                    "parent": "v",
+                    "next": "B",
+                    "parent": "A",
                     "inputs": {
                         "SECS": [
                             1,
@@ -174,14 +175,14 @@
                         ],
                         "TO": [
                             1,
-                            "["
+                            "ae"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "[": {
+                "ae": {
                     "opcode": "motion_glideto_menu",
                     "next": null,
                     "parent": "g",
@@ -195,9 +196,9 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "w": {
+                "B": {
                     "opcode": "motion_glidesecstoxy",
-                    "next": "x",
+                    "next": "C",
                     "parent": "g",
                     "inputs": {
                         "SECS": [
@@ -226,10 +227,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "x": {
+                "C": {
                     "opcode": "motion_pointindirection",
                     "next": "h",
-                    "parent": "w",
+                    "parent": "B",
                     "inputs": {
                         "DIRECTION": [
                             1,
@@ -245,19 +246,19 @@
                 },
                 "h": {
                     "opcode": "motion_pointtowards",
-                    "next": "y",
-                    "parent": "x",
+                    "next": "D",
+                    "parent": "C",
                     "inputs": {
                         "TOWARDS": [
                             1,
-                            "]"
+                            "af"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "]": {
+                "af": {
                     "opcode": "motion_pointtowards_menu",
                     "next": null,
                     "parent": "h",
@@ -271,9 +272,9 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "y": {
+                "D": {
                     "opcode": "motion_changexby",
-                    "next": "z",
+                    "next": "E",
                     "parent": "h",
                     "inputs": {
                         "DX": [
@@ -288,10 +289,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "z": {
+                "E": {
                     "opcode": "motion_setx",
-                    "next": "A",
-                    "parent": "y",
+                    "next": "F",
+                    "parent": "D",
                     "inputs": {
                         "X": [
                             1,
@@ -305,10 +306,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "A": {
+                "F": {
                     "opcode": "motion_changeyby",
-                    "next": "B",
-                    "parent": "z",
+                    "next": "G",
+                    "parent": "E",
                     "inputs": {
                         "DY": [
                             1,
@@ -322,10 +323,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "B": {
+                "G": {
                     "opcode": "motion_sety",
-                    "next": "C",
-                    "parent": "A",
+                    "next": "H",
+                    "parent": "F",
                     "inputs": {
                         "Y": [
                             1,
@@ -339,19 +340,19 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "C": {
+                "H": {
                     "opcode": "motion_ifonedgebounce",
-                    "next": "D",
-                    "parent": "B",
+                    "next": "I",
+                    "parent": "G",
                     "inputs": {},
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "D": {
+                "I": {
                     "opcode": "motion_setrotationstyle",
-                    "next": "E",
-                    "parent": "C",
+                    "next": "J",
+                    "parent": "H",
                     "inputs": {},
                     "fields": {
                         "STYLE": [
@@ -362,7 +363,7 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "aI": {
+                "a(": {
                     "opcode": "motion_xposition",
                     "next": null,
                     "parent": null,
@@ -373,7 +374,7 @@
                     "x": 48,
                     "y": 64
                 },
-                "aJ": {
+                "a)": {
                     "opcode": "motion_yposition",
                     "next": null,
                     "parent": null,
@@ -384,7 +385,7 @@
                     "x": 48,
                     "y": 176
                 },
-                "aK": {
+                "a*": {
                     "opcode": "motion_direction",
                     "next": null,
                     "parent": null,
@@ -395,10 +396,10 @@
                     "x": 48,
                     "y": 288
                 },
-                "E": {
+                "J": {
                     "opcode": "looks_sayforsecs",
-                    "next": "F",
-                    "parent": "D",
+                    "next": "K",
+                    "parent": "I",
                     "inputs": {
                         "MESSAGE": [
                             1,
@@ -419,10 +420,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "F": {
+                "K": {
                     "opcode": "looks_say",
-                    "next": "G",
-                    "parent": "E",
+                    "next": "L",
+                    "parent": "J",
                     "inputs": {
                         "MESSAGE": [
                             1,
@@ -436,10 +437,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "G": {
+                "L": {
                     "opcode": "looks_thinkforsecs",
-                    "next": "H",
-                    "parent": "F",
+                    "next": "M",
+                    "parent": "K",
                     "inputs": {
                         "MESSAGE": [
                             1,
@@ -460,10 +461,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "H": {
+                "M": {
                     "opcode": "looks_think",
                     "next": "i",
-                    "parent": "G",
+                    "parent": "L",
                     "inputs": {
                         "MESSAGE": [
                             1,
@@ -479,19 +480,19 @@
                 },
                 "i": {
                     "opcode": "looks_switchcostumeto",
-                    "next": "I",
-                    "parent": "H",
+                    "next": "N",
+                    "parent": "M",
                     "inputs": {
                         "COSTUME": [
                             1,
-                            "^"
+                            "ag"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "^": {
+                "ag": {
                     "opcode": "looks_costume",
                     "next": null,
                     "parent": "i",
@@ -505,7 +506,7 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "I": {
+                "N": {
                     "opcode": "looks_nextcostume",
                     "next": "j",
                     "parent": "i",
@@ -516,19 +517,19 @@
                 },
                 "j": {
                     "opcode": "looks_switchbackdropto",
-                    "next": "J",
-                    "parent": "I",
+                    "next": "O",
+                    "parent": "N",
                     "inputs": {
                         "BACKDROP": [
                             1,
-                            "_"
+                            "ah"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "_": {
+                "ah": {
                     "opcode": "looks_backdrops",
                     "next": null,
                     "parent": "j",
@@ -542,19 +543,19 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "J": {
+                "O": {
                     "opcode": "looks_nextbackdrop",
-                    "next": "K",
+                    "next": "P",
                     "parent": "j",
                     "inputs": {},
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "K": {
+                "P": {
                     "opcode": "looks_changesizeby",
-                    "next": "L",
-                    "parent": "J",
+                    "next": "Q",
+                    "parent": "O",
                     "inputs": {
                         "CHANGE": [
                             1,
@@ -568,10 +569,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "L": {
+                "Q": {
                     "opcode": "looks_setsizeto",
-                    "next": "M",
-                    "parent": "K",
+                    "next": "R",
+                    "parent": "P",
                     "inputs": {
                         "SIZE": [
                             1,
@@ -585,10 +586,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "M": {
+                "R": {
                     "opcode": "looks_changeeffectby",
-                    "next": "N",
-                    "parent": "L",
+                    "next": "S",
+                    "parent": "Q",
                     "inputs": {
                         "CHANGE": [
                             1,
@@ -607,10 +608,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "N": {
+                "S": {
                     "opcode": "looks_seteffectto",
-                    "next": "O",
-                    "parent": "M",
+                    "next": "T",
+                    "parent": "R",
                     "inputs": {
                         "VALUE": [
                             1,
@@ -629,37 +630,37 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "O": {
+                "T": {
                     "opcode": "looks_cleargraphiceffects",
-                    "next": "P",
-                    "parent": "N",
+                    "next": "U",
+                    "parent": "S",
                     "inputs": {},
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "P": {
+                "U": {
                     "opcode": "looks_show",
-                    "next": "Q",
-                    "parent": "O",
+                    "next": "V",
+                    "parent": "T",
                     "inputs": {},
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "Q": {
+                "V": {
                     "opcode": "looks_hide",
-                    "next": "R",
-                    "parent": "P",
+                    "next": "W",
+                    "parent": "U",
                     "inputs": {},
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "R": {
+                "W": {
                     "opcode": "looks_gotofrontback",
-                    "next": "S",
-                    "parent": "Q",
+                    "next": "X",
+                    "parent": "V",
                     "inputs": {},
                     "fields": {
                         "FRONT_BACK": [
@@ -670,10 +671,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "S": {
+                "X": {
                     "opcode": "looks_goforwardbackwardlayers",
                     "next": "k",
-                    "parent": "R",
+                    "parent": "W",
                     "inputs": {
                         "NUM": [
                             1,
@@ -692,7 +693,7 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "aL": {
+                "a+": {
                     "opcode": "looks_costumenumbername",
                     "next": null,
                     "parent": null,
@@ -708,7 +709,7 @@
                     "x": 48,
                     "y": 400
                 },
-                "aM": {
+                "a,": {
                     "opcode": "looks_backdropnumbername",
                     "next": null,
                     "parent": null,
@@ -724,7 +725,7 @@
                     "x": 48,
                     "y": 512
                 },
-                "aN": {
+                "a-": {
                     "opcode": "looks_size",
                     "next": null,
                     "parent": null,
@@ -738,18 +739,18 @@
                 "k": {
                     "opcode": "sound_playuntildone",
                     "next": "l",
-                    "parent": "S",
+                    "parent": "X",
                     "inputs": {
                         "SOUND_MENU": [
                             1,
-                            "`"
+                            "ai"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "`": {
+                "ai": {
                     "opcode": "sound_sounds_menu",
                     "next": null,
                     "parent": "k",
@@ -765,19 +766,19 @@
                 },
                 "l": {
                     "opcode": "sound_play",
-                    "next": "T",
+                    "next": "Y",
                     "parent": "k",
                     "inputs": {
                         "SOUND_MENU": [
                             1,
-                            "{"
+                            "aj"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "{": {
+                "aj": {
                     "opcode": "sound_sounds_menu",
                     "next": null,
                     "parent": "l",
@@ -791,19 +792,19 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "T": {
+                "Y": {
                     "opcode": "sound_stopallsounds",
-                    "next": "U",
+                    "next": "Z",
                     "parent": "l",
                     "inputs": {},
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "U": {
+                "Z": {
                     "opcode": "sound_changeeffectby",
-                    "next": "V",
-                    "parent": "T",
+                    "next": "!",
+                    "parent": "Y",
                     "inputs": {
                         "VALUE": [
                             1,
@@ -822,10 +823,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "V": {
+                "!": {
                     "opcode": "sound_seteffectto",
-                    "next": "W",
-                    "parent": "U",
+                    "next": "#",
+                    "parent": "Z",
                     "inputs": {
                         "VALUE": [
                             1,
@@ -844,19 +845,19 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "W": {
+                "#": {
                     "opcode": "sound_cleareffects",
-                    "next": "X",
-                    "parent": "V",
+                    "next": "%",
+                    "parent": "!",
                     "inputs": {},
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "X": {
+                "%": {
                     "opcode": "sound_changevolumeby",
-                    "next": "Y",
-                    "parent": "W",
+                    "next": "(",
+                    "parent": "#",
                     "inputs": {
                         "VOLUME": [
                             1,
@@ -870,10 +871,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "Y": {
+                "(": {
                     "opcode": "sound_setvolumeto",
-                    "next": "Z",
-                    "parent": "X",
+                    "next": ")",
+                    "parent": "%",
                     "inputs": {
                         "VOLUME": [
                             1,
@@ -887,7 +888,7 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "aO": {
+                "a.": {
                     "opcode": "sound_volume",
                     "next": null,
                     "parent": null,
@@ -898,10 +899,10 @@
                     "x": 48,
                     "y": 736
                 },
-                "!": {
+                "*": {
                     "opcode": "control_wait",
-                    "next": "|",
-                    "parent": "#",
+                    "next": "ak",
+                    "parent": "+",
                     "inputs": {
                         "DURATION": [
                             1,
@@ -917,8 +918,8 @@
                 },
                 "e": {
                     "opcode": "control_repeat",
-                    "next": "%",
-                    "parent": "?",
+                    "next": ",",
+                    "parent": "u",
                     "inputs": {
                         "TIMES": [
                             1,
@@ -929,14 +930,14 @@
                         ],
                         "SUBSTACK": [
                             2,
-                            "("
+                            "-"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "%": {
+                ",": {
                     "opcode": "control_forever",
                     "next": null,
                     "parent": "e",
@@ -953,15 +954,15 @@
                 "b": {
                     "opcode": "control_if",
                     "next": "a",
-                    "parent": "%",
+                    "parent": ",",
                     "inputs": {
                         "CONDITION": [
                             2,
-                            ")"
+                            "."
                         ],
                         "SUBSTACK": [
                             2,
-                            "}"
+                            "al"
                         ]
                     },
                     "fields": {},
@@ -975,15 +976,15 @@
                     "inputs": {
                         "CONDITION": [
                             2,
-                            "~"
+                            "am"
                         ],
                         "SUBSTACK": [
                             2,
-                            "aa"
+                            "an"
                         ],
                         "SUBSTACK2": [
                             2,
-                            "ab"
+                            "ao"
                         ]
                     },
                     "fields": {},
@@ -997,7 +998,7 @@
                     "inputs": {
                         "CONDITION": [
                             2,
-                            "ac"
+                            "ap"
                         ]
                     },
                     "fields": {},
@@ -1011,11 +1012,11 @@
                     "inputs": {
                         "CONDITION": [
                             2,
-                            "*"
+                            "/"
                         ],
                         "SUBSTACK": [
                             2,
-                            "ad"
+                            "aq"
                         ]
                     },
                     "fields": {},
@@ -1024,23 +1025,23 @@
                 },
                 "d": {
                     "opcode": "control_while",
-                    "next": "+",
+                    "next": ":",
                     "parent": "c",
                     "inputs": {
                         "CONDITION": [
                             2,
-                            "ae"
+                            "ar"
                         ],
                         "SUBSTACK": [
                             2,
-                            "af"
+                            "as"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "ag": {
+                "at": {
                     "opcode": "control_stop",
                     "next": null,
                     "parent": "n",
@@ -1061,19 +1062,19 @@
                 },
                 "n": {
                     "opcode": "control_create_clone_of",
-                    "next": "ag",
-                    "parent": ",",
+                    "next": "at",
+                    "parent": ";",
                     "inputs": {
                         "CLONE_OPTION": [
                             1,
-                            "ah"
+                            "au"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "ah": {
+                "au": {
                     "opcode": "control_create_clone_of_menu",
                     "next": null,
                     "parent": "n",
@@ -1087,44 +1088,44 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "ai": {
+                "av": {
                     "opcode": "control_delete_this_clone",
                     "next": null,
-                    "parent": "aj",
+                    "parent": "aw",
                     "inputs": {},
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "aj": {
+                "aw": {
                     "opcode": "control_start_as_clone",
-                    "next": "ai",
+                    "next": "av",
                     "parent": null,
                     "inputs": {},
                     "fields": {},
                     "shadow": false,
                     "topLevel": true,
-                    "x": 933,
+                    "x": 1342,
                     "y": 64
                 },
-                ")": {
+                ".": {
                     "opcode": "sensing_touchingobject",
                     "next": null,
                     "parent": "b",
                     "inputs": {
                         "TOUCHINGOBJECTMENU": [
                             1,
-                            "ak"
+                            "ax"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "ak": {
+                "ax": {
                     "opcode": "sensing_touchingobjectmenu",
                     "next": null,
-                    "parent": ")",
+                    "parent": ".",
                     "inputs": {},
                     "fields": {
                         "TOUCHINGOBJECTMENU": [
@@ -1135,7 +1136,7 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "~": {
+                "am": {
                     "opcode": "sensing_touchingcolor",
                     "next": null,
                     "parent": "a",
@@ -1152,7 +1153,7 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "ac": {
+                "ap": {
                     "opcode": "sensing_coloristouchingcolor",
                     "next": null,
                     "parent": "m",
@@ -1176,14 +1177,14 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "al": {
+                "ay": {
                     "opcode": "sensing_distanceto",
                     "next": null,
                     "parent": null,
                     "inputs": {
                         "DISTANCETOMENU": [
                             1,
-                            "am"
+                            "az"
                         ]
                     },
                     "fields": {},
@@ -1192,10 +1193,10 @@
                     "x": 48,
                     "y": 848
                 },
-                "am": {
+                "az": {
                     "opcode": "sensing_distancetomenu",
                     "next": null,
-                    "parent": "al",
+                    "parent": "ay",
                     "inputs": {},
                     "fields": {
                         "DISTANCETOMENU": [
@@ -1206,10 +1207,10 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "|": {
+                "ak": {
                     "opcode": "sensing_askandwait",
                     "next": null,
-                    "parent": "!",
+                    "parent": "*",
                     "inputs": {
                         "QUESTION": [
                             1,
@@ -1223,7 +1224,7 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "aP": {
+                "a/": {
                     "opcode": "sensing_answer",
                     "next": null,
                     "parent": null,
@@ -1234,24 +1235,24 @@
                     "x": 48,
                     "y": 960
                 },
-                "*": {
+                "/": {
                     "opcode": "sensing_keypressed",
                     "next": null,
                     "parent": "c",
                     "inputs": {
                         "KEY_OPTION": [
                             1,
-                            "an"
+                            "aA"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "an": {
+                "aA": {
                     "opcode": "sensing_keyoptions",
                     "next": null,
-                    "parent": "*",
+                    "parent": "/",
                     "inputs": {},
                     "fields": {
                         "KEY_OPTION": [
@@ -1262,7 +1263,7 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "ae": {
+                "ar": {
                     "opcode": "sensing_mousedown",
                     "next": null,
                     "parent": "d",
@@ -1271,7 +1272,7 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "aQ": {
+                "a:": {
                     "opcode": "sensing_mousex",
                     "next": null,
                     "parent": null,
@@ -1282,7 +1283,7 @@
                     "x": 48,
                     "y": 1072
                 },
-                "aR": {
+                "a;": {
                     "opcode": "sensing_mousey",
                     "next": null,
                     "parent": null,
@@ -1293,7 +1294,7 @@
                     "x": 48,
                     "y": 1184
                 },
-                "}": {
+                "al": {
                     "opcode": "sensing_setdragmode",
                     "next": null,
                     "parent": "b",
@@ -1307,7 +1308,7 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "aS": {
+                "a=": {
                     "opcode": "sensing_loudness",
                     "next": null,
                     "parent": null,
@@ -1318,7 +1319,7 @@
                     "x": 48,
                     "y": 1296
                 },
-                "aT": {
+                "a?": {
                     "opcode": "sensing_timer",
                     "next": null,
                     "parent": null,
@@ -1329,7 +1330,7 @@
                     "x": 48,
                     "y": 1408
                 },
-                "aa": {
+                "an": {
                     "opcode": "sensing_resettimer",
                     "next": null,
                     "parent": "a",
@@ -1338,14 +1339,14 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "ao": {
+                "aB": {
                     "opcode": "sensing_of",
                     "next": null,
                     "parent": null,
                     "inputs": {
                         "OBJECT": [
                             1,
-                            "ap"
+                            "aC"
                         ]
                     },
                     "fields": {
@@ -1359,10 +1360,10 @@
                     "x": 48,
                     "y": 1520
                 },
-                "ap": {
+                "aC": {
                     "opcode": "sensing_of_object_menu",
                     "next": null,
-                    "parent": "ao",
+                    "parent": "aB",
                     "inputs": {},
                     "fields": {
                         "OBJECT": [
@@ -1373,7 +1374,7 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "aU": {
+                "a@": {
                     "opcode": "sensing_current",
                     "next": null,
                     "parent": null,
@@ -1389,7 +1390,7 @@
                     "x": 48,
                     "y": 1632
                 },
-                "aV": {
+                "a[": {
                     "opcode": "sensing_dayssince2000",
                     "next": null,
                     "parent": null,
@@ -1400,7 +1401,7 @@
                     "x": 48,
                     "y": 1744
                 },
-                "aW": {
+                "a]": {
                     "opcode": "sensing_username",
                     "next": null,
                     "parent": null,
@@ -1411,7 +1412,7 @@
                     "x": 48,
                     "y": 1856
                 },
-                "aX": {
+                "a^": {
                     "opcode": "operator_add",
                     "next": null,
                     "parent": null,
@@ -1437,7 +1438,7 @@
                     "x": 48,
                     "y": 1968
                 },
-                "aY": {
+                "a_": {
                     "opcode": "operator_subtract",
                     "next": null,
                     "parent": null,
@@ -1463,7 +1464,7 @@
                     "x": 48,
                     "y": 2080
                 },
-                "aZ": {
+                "a`": {
                     "opcode": "operator_multiply",
                     "next": null,
                     "parent": null,
@@ -1489,7 +1490,7 @@
                     "x": 48,
                     "y": 2192
                 },
-                "a!": {
+                "a{": {
                     "opcode": "operator_divide",
                     "next": null,
                     "parent": null,
@@ -1515,7 +1516,7 @@
                     "x": 48,
                     "y": 2304
                 },
-                "a#": {
+                "a|": {
                     "opcode": "operator_random",
                     "next": null,
                     "parent": null,
@@ -1541,7 +1542,7 @@
                     "x": 48,
                     "y": 2416
                 },
-                "a%": {
+                "a}": {
                     "opcode": "operator_gt",
                     "next": null,
                     "parent": null,
@@ -1567,7 +1568,7 @@
                     "x": 48,
                     "y": 2528
                 },
-                "a(": {
+                "a~": {
                     "opcode": "operator_lt",
                     "next": null,
                     "parent": null,
@@ -1593,7 +1594,7 @@
                     "x": 48,
                     "y": 2640
                 },
-                "a)": {
+                "ba": {
                     "opcode": "operator_equals",
                     "next": null,
                     "parent": null,
@@ -1619,7 +1620,7 @@
                     "x": 48,
                     "y": 2752
                 },
-                "a*": {
+                "bb": {
                     "opcode": "operator_and",
                     "next": null,
                     "parent": null,
@@ -1630,7 +1631,7 @@
                     "x": 48,
                     "y": 2864
                 },
-                "a+": {
+                "bc": {
                     "opcode": "operator_or",
                     "next": null,
                     "parent": null,
@@ -1641,7 +1642,7 @@
                     "x": 48,
                     "y": 2976
                 },
-                "a,": {
+                "bd": {
                     "opcode": "operator_not",
                     "next": null,
                     "parent": null,
@@ -1652,7 +1653,7 @@
                     "x": 48,
                     "y": 3088
                 },
-                "a-": {
+                "be": {
                     "opcode": "operator_join",
                     "next": null,
                     "parent": null,
@@ -1678,7 +1679,7 @@
                     "x": 48,
                     "y": 3200
                 },
-                "a.": {
+                "bf": {
                     "opcode": "operator_letter_of",
                     "next": null,
                     "parent": null,
@@ -1704,7 +1705,7 @@
                     "x": 48,
                     "y": 3312
                 },
-                "a/": {
+                "bg": {
                     "opcode": "operator_length",
                     "next": null,
                     "parent": null,
@@ -1723,7 +1724,7 @@
                     "x": 48,
                     "y": 3424
                 },
-                "a:": {
+                "bh": {
                     "opcode": "operator_contains",
                     "next": null,
                     "parent": null,
@@ -1749,7 +1750,7 @@
                     "x": 48,
                     "y": 3536
                 },
-                "a;": {
+                "bi": {
                     "opcode": "operator_mod",
                     "next": null,
                     "parent": null,
@@ -1775,7 +1776,7 @@
                     "x": 48,
                     "y": 3648
                 },
-                "a=": {
+                "bj": {
                     "opcode": "operator_round",
                     "next": null,
                     "parent": null,
@@ -1794,7 +1795,7 @@
                     "x": 48,
                     "y": 3760
                 },
-                "a?": {
+                "bk": {
                     "opcode": "operator_mathop",
                     "next": null,
                     "parent": null,
@@ -1818,7 +1819,7 @@
                     "x": 48,
                     "y": 3872
                 },
-                "ab": {
+                "ao": {
                     "opcode": "data_setvariableto",
                     "next": null,
                     "parent": "a",
@@ -1840,7 +1841,7 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "ad": {
+                "aq": {
                     "opcode": "data_changevariableby",
                     "next": null,
                     "parent": "c",
@@ -1862,7 +1863,7 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "af": {
+                "as": {
                     "opcode": "data_showvariable",
                     "next": null,
                     "parent": "d",
@@ -1876,9 +1877,9 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "+": {
+                ":": {
                     "opcode": "data_hidevariable",
-                    "next": "-",
+                    "next": "=",
                     "parent": "d",
                     "inputs": {},
                     "fields": {
@@ -1890,9 +1891,9 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                ".": {
+                "?": {
                     "opcode": "procedures_definition",
-                    "next": "aq",
+                    "next": "aD",
                     "parent": null,
                     "inputs": {
                         "custom_block": [
@@ -1903,21 +1904,21 @@
                     "fields": {},
                     "shadow": false,
                     "topLevel": true,
-                    "x": 933,
+                    "x": 1342,
                     "y": 232
                 },
                 "o": {
                     "opcode": "procedures_prototype",
                     "next": null,
-                    "parent": ".",
+                    "parent": "?",
                     "inputs": {
                         "+_RVO{{*8y#BV(bgxXA~": [
                             1,
-                            "ar"
+                            "aE"
                         ],
                         "g2#(7o9?T]Fg}Z8m5q^B": [
                             1,
-                            "as"
+                            "aF"
                         ]
                     },
                     "fields": {},
@@ -1933,7 +1934,7 @@
                         "warp": "true"
                     }
                 },
-                "ar": {
+                "aE": {
                     "opcode": "argument_reporter_string_number",
                     "next": null,
                     "parent": "o",
@@ -1947,7 +1948,7 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "as": {
+                "aF": {
                     "opcode": "argument_reporter_boolean",
                     "next": null,
                     "parent": "o",
@@ -1961,10 +1962,10 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "-": {
+                "=": {
                     "opcode": "procedures_call",
-                    "next": ",",
-                    "parent": "+",
+                    "next": ";",
+                    "parent": ":",
                     "inputs": {
                         "+_RVO{{*8y#BV(bgxXA~": [
                             1,
@@ -1985,9 +1986,9 @@
                         "warp": "true"
                     }
                 },
-                "/": {
+                "@": {
                     "opcode": "procedures_definition",
-                    "next": "at",
+                    "next": "aG",
                     "parent": null,
                     "inputs": {
                         "custom_block": [
@@ -1998,21 +1999,21 @@
                     "fields": {},
                     "shadow": false,
                     "topLevel": true,
-                    "x": 933,
+                    "x": 1342,
                     "y": 424
                 },
                 "p": {
                     "opcode": "procedures_prototype",
                     "next": null,
-                    "parent": "/",
+                    "parent": "@",
                     "inputs": {
                         ")iN_CdM+^v8[/{mpuAsA": [
                             1,
-                            "au"
+                            "aH"
                         ],
                         "`YY|fhf,2oYev-j+Ycor": [
                             1,
-                            "av"
+                            "aI"
                         ]
                     },
                     "fields": {},
@@ -2028,7 +2029,7 @@
                         "warp": "false"
                     }
                 },
-                "au": {
+                "aH": {
                     "opcode": "argument_reporter_string_number",
                     "next": null,
                     "parent": "p",
@@ -2042,7 +2043,7 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                "av": {
+                "aI": {
                     "opcode": "argument_reporter_boolean",
                     "next": null,
                     "parent": "p",
@@ -2056,10 +2057,10 @@
                     "shadow": true,
                     "topLevel": false
                 },
-                ",": {
+                ";": {
                     "opcode": "procedures_call",
                     "next": "n",
-                    "parent": "-",
+                    "parent": "=",
                     "inputs": {
                         ")iN_CdM+^v8[/{mpuAsA": [
                             1,
@@ -2080,9 +2081,9 @@
                         "warp": "false"
                     }
                 },
-                "aw": {
+                "aJ": {
                     "opcode": "event_whenkeypressed",
-                    "next": "ax",
+                    "next": "aK",
                     "parent": null,
                     "inputs": {},
                     "fields": {
@@ -2093,23 +2094,23 @@
                     },
                     "shadow": false,
                     "topLevel": true,
-                    "x": 459,
+                    "x": 867,
                     "y": 3800
                 },
-                "ay": {
+                "aL": {
                     "opcode": "event_whenthisspriteclicked",
-                    "next": "az",
+                    "next": "aM",
                     "parent": null,
                     "inputs": {},
                     "fields": {},
                     "shadow": false,
                     "topLevel": true,
-                    "x": 459,
+                    "x": 867,
                     "y": 3976
                 },
-                "aA": {
+                "aN": {
                     "opcode": "event_whenbackdropswitchesto",
-                    "next": ":",
+                    "next": "[",
                     "parent": null,
                     "inputs": {},
                     "fields": {
@@ -2120,12 +2121,12 @@
                     },
                     "shadow": false,
                     "topLevel": true,
-                    "x": 459,
+                    "x": 867,
                     "y": 4152
                 },
-                "aB": {
+                "aO": {
                     "opcode": "event_whengreaterthan",
-                    "next": "aC",
+                    "next": "aP",
                     "parent": null,
                     "inputs": {
                         "VALUE": [
@@ -2144,12 +2145,12 @@
                     },
                     "shadow": false,
                     "topLevel": true,
-                    "x": 459,
+                    "x": 867,
                     "y": 4376
                 },
-                "aD": {
+                "aQ": {
                     "opcode": "event_whenbroadcastreceived",
-                    "next": ";",
+                    "next": "]",
                     "parent": null,
                     "inputs": {},
                     "fields": {
@@ -2160,13 +2161,13 @@
                     },
                     "shadow": false,
                     "topLevel": true,
-                    "x": 459,
+                    "x": 867,
                     "y": 4552
                 },
-                "Z": {
+                ")": {
                     "opcode": "event_broadcast",
-                    "next": "#",
-                    "parent": "Y",
+                    "next": "+",
+                    "parent": "(",
                     "inputs": {
                         "BROADCAST_INPUT": [
                             1,
@@ -2181,10 +2182,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "#": {
+                "+": {
                     "opcode": "event_broadcastandwait",
-                    "next": "!",
-                    "parent": "Z",
+                    "next": "*",
+                    "parent": ")",
                     "inputs": {
                         "BROADCAST_INPUT": [
                             1,
@@ -2199,10 +2200,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "ax": {
+                "aK": {
                     "opcode": "data_addtolist",
                     "next": null,
-                    "parent": "aw",
+                    "parent": "aJ",
                     "inputs": {
                         "ITEM": [
                             1,
@@ -2221,10 +2222,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "az": {
+                "aM": {
                     "opcode": "data_deleteoflist",
                     "next": null,
-                    "parent": "ay",
+                    "parent": "aL",
                     "inputs": {
                         "INDEX": [
                             1,
@@ -2243,10 +2244,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                ";": {
+                "]": {
                     "opcode": "data_deletealloflist",
-                    "next": "aE",
-                    "parent": "aD",
+                    "next": "aR",
+                    "parent": "aQ",
                     "inputs": {},
                     "fields": {
                         "LIST": [
@@ -2257,10 +2258,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "aE": {
+                "aR": {
                     "opcode": "data_insertatlist",
                     "next": null,
-                    "parent": ";",
+                    "parent": "]",
                     "inputs": {
                         "INDEX": [
                             1,
@@ -2286,10 +2287,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "aC": {
+                "aP": {
                     "opcode": "data_replaceitemoflist",
                     "next": null,
-                    "parent": "aB",
+                    "parent": "aO",
                     "inputs": {
                         "INDEX": [
                             1,
@@ -2315,7 +2316,7 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "a@": {
+                "bl": {
                     "opcode": "data_itemoflist",
                     "next": null,
                     "parent": null,
@@ -2339,7 +2340,7 @@
                     "x": 48,
                     "y": 3984
                 },
-                "a[": {
+                "bm": {
                     "opcode": "data_itemnumoflist",
                     "next": null,
                     "parent": null,
@@ -2363,7 +2364,7 @@
                     "x": 48,
                     "y": 4096
                 },
-                "a]": {
+                "bn": {
                     "opcode": "data_lengthoflist",
                     "next": null,
                     "parent": null,
@@ -2379,7 +2380,7 @@
                     "x": 48,
                     "y": 4208
                 },
-                "a^": {
+                "bo": {
                     "opcode": "data_listcontainsitem",
                     "next": null,
                     "parent": null,
@@ -2403,10 +2404,10 @@
                     "x": 48,
                     "y": 4320
                 },
-                ":": {
+                "[": {
                     "opcode": "data_showlist",
-                    "next": "aF",
-                    "parent": "aA",
+                    "next": "aS",
+                    "parent": "aN",
                     "inputs": {},
                     "fields": {
                         "LIST": [
@@ -2417,10 +2418,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "aF": {
+                "aS": {
                     "opcode": "data_hidelist",
                     "next": null,
-                    "parent": ":",
+                    "parent": "[",
                     "inputs": {},
                     "fields": {
                         "LIST": [
@@ -2431,24 +2432,10 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "a_": [
-                    12,
-                    "我的变量",
-                    "`jEk@4|i[#Fk?(8x)AV.-my variable",
-                    48,
-                    4432
-                ],
-                "a`": [
-                    13,
-                    "my_list1",
-                    "x8h}l3Ve3sCj{wM-:-Kc",
-                    48,
-                    4544
-                ],
-                "aq": {
+                "aD": {
                     "opcode": "control_wait",
                     "next": null,
-                    "parent": ".",
+                    "parent": "?",
                     "inputs": {
                         "DURATION": [
                             1,
@@ -2462,35 +2449,35 @@
                     "shadow": false,
                     "topLevel": false
                 },
-                "at": {
+                "aG": {
                     "opcode": "control_wait_until",
                     "next": null,
-                    "parent": "/",
+                    "parent": "@",
                     "inputs": {},
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "aG": {
+                "aT": {
                     "opcode": "procedures_definition",
                     "next": null,
                     "parent": null,
                     "inputs": {
                         "custom_block": [
                             1,
-                            "aH"
+                            "aU"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": true,
-                    "x": 459,
+                    "x": 867,
                     "y": 64
                 },
-                "aH": {
+                "aU": {
                     "opcode": "procedures_prototype",
                     "next": null,
-                    "parent": "aG",
+                    "parent": "aT",
                     "inputs": {},
                     "fields": {},
                     "shadow": true,
@@ -2505,7 +2492,7 @@
                         "warp": "false"
                     }
                 },
-                "(": {
+                "-": {
                     "opcode": "control_repeat",
                     "next": null,
                     "parent": "e",
@@ -2528,8 +2515,8 @@
                 },
                 "f": {
                     "opcode": "control_repeat",
-                    "next": "v",
-                    "parent": "(",
+                    "next": "A",
+                    "parent": "-",
                     "inputs": {
                         "TIMES": [
                             1,
@@ -2540,14 +2527,14 @@
                         ],
                         "SUBSTACK": [
                             2,
-                            "="
+                            "^"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "=": {
+                "^": {
                     "opcode": "control_repeat",
                     "next": null,
                     "parent": "f",
@@ -2561,17 +2548,17 @@
                         ],
                         "SUBSTACK": [
                             2,
-                            "r"
+                            "w"
                         ]
                     },
                     "fields": {},
                     "shadow": false,
                     "topLevel": false
                 },
-                "r": {
+                "w": {
                     "opcode": "control_repeat",
                     "next": null,
-                    "parent": "=",
+                    "parent": "^",
                     "inputs": {
                         "TIMES": [
                             1,
@@ -2582,7 +2569,342 @@
                         ],
                         "SUBSTACK": [
                             2,
-                            "q"
+                            "v"
+                        ]
+                    },
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "bp": [
+                    12,
+                    "我的变量",
+                    "`jEk@4|i[#Fk?(8x)AV.-my variable",
+                    48,
+                    4432
+                ],
+                "bq": [
+                    13,
+                    "my_list1",
+                    "x8h}l3Ve3sCj{wM-:-Kc",
+                    48,
+                    4544
+                ],
+                "_": {
+                    "opcode": "music_playDrumForBeats",
+                    "next": "`",
+                    "parent": null,
+                    "inputs": {
+                        "DRUM": [
+                            1,
+                            "aV"
+                        ],
+                        "BEATS": [
+                            1,
+                            [
+                                4,
+                                "0.25"
+                            ]
+                        ]
+                    },
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": true,
+                    "x": 459,
+                    "y": 64
+                },
+                "aV": {
+                    "opcode": "music_menu_DRUM",
+                    "next": null,
+                    "parent": "_",
+                    "inputs": {},
+                    "fields": {
+                        "DRUM": [
+                            "1",
+                            null
+                        ]
+                    },
+                    "shadow": true,
+                    "topLevel": false
+                },
+                "`": {
+                    "opcode": "music_restForBeats",
+                    "next": "q",
+                    "parent": "_",
+                    "inputs": {
+                        "BEATS": [
+                            1,
+                            [
+                                4,
+                                "0.25"
+                            ]
+                        ]
+                    },
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "q": {
+                    "opcode": "music_playNoteForBeats",
+                    "next": "r",
+                    "parent": "`",
+                    "inputs": {
+                        "NOTE": [
+                            1,
+                            "aW"
+                        ],
+                        "BEATS": [
+                            1,
+                            [
+                                4,
+                                "0.25"
+                            ]
+                        ]
+                    },
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "aW": {
+                    "opcode": "note",
+                    "next": null,
+                    "parent": "q",
+                    "inputs": {},
+                    "fields": {
+                        "NOTE": [
+                            "60",
+                            null
+                        ]
+                    },
+                    "shadow": true,
+                    "topLevel": false
+                },
+                "r": {
+                    "opcode": "music_setInstrument",
+                    "next": "{",
+                    "parent": "q",
+                    "inputs": {
+                        "INSTRUMENT": [
+                            1,
+                            "aX"
+                        ]
+                    },
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "aX": {
+                    "opcode": "music_menu_INSTRUMENT",
+                    "next": null,
+                    "parent": "r",
+                    "inputs": {},
+                    "fields": {
+                        "INSTRUMENT": [
+                            "1",
+                            null
+                        ]
+                    },
+                    "shadow": true,
+                    "topLevel": false
+                },
+                "{": {
+                    "opcode": "music_setTempo",
+                    "next": "aY",
+                    "parent": "r",
+                    "inputs": {
+                        "TEMPO": [
+                            1,
+                            [
+                                4,
+                                "60"
+                            ]
+                        ]
+                    },
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "aY": {
+                    "opcode": "music_changeTempo",
+                    "next": null,
+                    "parent": "{",
+                    "inputs": {
+                        "TEMPO": [
+                            1,
+                            [
+                                4,
+                                "20"
+                            ]
+                        ]
+                    },
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "br": {
+                    "opcode": "music_getTempo",
+                    "next": null,
+                    "parent": null,
+                    "inputs": {},
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": true,
+                    "x": 48,
+                    "y": 4656
+                },
+                "aZ": {
+                    "opcode": "pen_clear",
+                    "next": "|",
+                    "parent": null,
+                    "inputs": {},
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": true,
+                    "x": 459,
+                    "y": 480
+                },
+                "|": {
+                    "opcode": "pen_stamp",
+                    "next": "}",
+                    "parent": "aZ",
+                    "inputs": {},
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "}": {
+                    "opcode": "pen_penDown",
+                    "next": "~",
+                    "parent": "|",
+                    "inputs": {},
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "~": {
+                    "opcode": "pen_penUp",
+                    "next": "aa",
+                    "parent": "}",
+                    "inputs": {},
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "aa": {
+                    "opcode": "pen_setPenColorToColor",
+                    "next": "s",
+                    "parent": "~",
+                    "inputs": {
+                        "COLOR": [
+                            1,
+                            [
+                                9,
+                                "#37d71f"
+                            ]
+                        ]
+                    },
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "s": {
+                    "opcode": "pen_changePenColorParamBy",
+                    "next": "t",
+                    "parent": "aa",
+                    "inputs": {
+                        "COLOR_PARAM": [
+                            1,
+                            "a!"
+                        ],
+                        "VALUE": [
+                            1,
+                            [
+                                4,
+                                "10"
+                            ]
+                        ]
+                    },
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "a!": {
+                    "opcode": "pen_menu_colorParam",
+                    "next": null,
+                    "parent": "s",
+                    "inputs": {},
+                    "fields": {
+                        "colorParam": [
+                            "color",
+                            null
+                        ]
+                    },
+                    "shadow": true,
+                    "topLevel": false
+                },
+                "t": {
+                    "opcode": "pen_setPenColorParamTo",
+                    "next": "ab",
+                    "parent": "s",
+                    "inputs": {
+                        "COLOR_PARAM": [
+                            1,
+                            "a#"
+                        ],
+                        "VALUE": [
+                            1,
+                            [
+                                4,
+                                "50"
+                            ]
+                        ]
+                    },
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "a#": {
+                    "opcode": "pen_menu_colorParam",
+                    "next": null,
+                    "parent": "t",
+                    "inputs": {},
+                    "fields": {
+                        "colorParam": [
+                            "color",
+                            null
+                        ]
+                    },
+                    "shadow": true,
+                    "topLevel": false
+                },
+                "ab": {
+                    "opcode": "pen_changePenSizeBy",
+                    "next": "a%",
+                    "parent": "t",
+                    "inputs": {
+                        "SIZE": [
+                            1,
+                            [
+                                4,
+                                "1"
+                            ]
+                        ]
+                    },
+                    "fields": {},
+                    "shadow": false,
+                    "topLevel": false
+                },
+                "a%": {
+                    "opcode": "pen_setPenSizeTo",
+                    "next": null,
+                    "parent": "ab",
+                    "inputs": {
+                        "SIZE": [
+                            1,
+                            [
+                                4,
+                                "1"
+                            ]
                         ]
                     },
                     "fields": {},
@@ -2590,7 +2912,17 @@
                     "topLevel": false
                 }
             },
-            "comments": {},
+            "comments": {
+                "ac": {
+                    "blockId": "u",
+                    "x": 1018.9120330810547,
+                    "y": 216,
+                    "width": 200,
+                    "height": 200,
+                    "minimized": false,
+                    "text": "这个是小绿旗积木的注释"
+                }
+            },
             "currentCostume": 0,
             "costumes": [
                 {
@@ -2632,7 +2964,7 @@
             "visible": true
         },
         {
-            "id": "-!_3u:dqqu*@kLw6iohu_direction",
+            "id": "ytl(.WKOGT,+M*,;6ZE-_direction",
             "mode": "default",
             "opcode": "motion_direction",
             "params": {},
@@ -2648,7 +2980,10 @@
             "isDiscrete": true
         }
     ],
-    "extensions": [],
+    "extensions": [
+        "music",
+        "pen"
+    ],
     "meta": {
         "semver": "3.0.0",
         "vm": "0.2.0",

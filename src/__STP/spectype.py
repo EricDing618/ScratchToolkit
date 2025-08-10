@@ -1,6 +1,6 @@
 from .config import Tuple,Union,init_path,safe_eval
 init_path()
-from scratchtoolkit.__STP.util import *
+from .util import *
 
 class BlockBuffer:
     def __init__(self):

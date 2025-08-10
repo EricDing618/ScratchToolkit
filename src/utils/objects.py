@@ -18,4 +18,20 @@ class Sprite:
         self.videoTransparency = target['videoTransparency']
         self.videoState = target['videoState']
         self.textToSpeechLanguage = target['textToSpeechLanguage']
+
+class Block:
+    def __init__(self, id:str, **kwargs):
+        self.id:str = id
+        self.opcode:str = kwargs.get('opcode', '')
+        self.next:str|None = kwargs.get('next', None)
+        self.parent:str|None = kwargs.get('parent', None)
+        self.inputs:dict = kwargs.get('inputs', {})
+        self.fields:dict = kwargs.get('fields', {})
+        self.shadow:bool = kwargs.get('shadow', False)
+        self.topLevel:bool = kwargs.get('topLevel', False)
+        self.x:int|None = kwargs.get('x', None)
+        self.y:int|None = kwargs.get('y', None)
+        self.isHead:bool = all([self.x, self.y])
+
+        
         

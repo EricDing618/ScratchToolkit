@@ -22,11 +22,11 @@ LOGFORMAT="<level>[{time:YYYY-MM-DD HH:mm:ss}] [{level}]: {message}</level>"
 '''if os.path.basename(THISPATH) != "STP":
     os.chdir('./src/scratchtoolkit/__STP')'''
 
-with open("./scratchtoolkit/__STP/frame/spriteframe.py","r",encoding="utf-8") as f:
+with open("./src/__STP/frame/spriteframe.py","r",encoding="utf-8") as f:
     SPRITE_INIT_CODE='\n'.join([i.rstrip() for i in f.readlines() if 'import' not in i])
-with open("./frame/gameframe.py","r",encoding="utf-8") as f:
+with open("./src/__STP/frame/gameframe.py","r",encoding="utf-8") as f:
     GAME_INIT_CODE='\n'.join([i.rstrip() for i in f.readlines() if 'import' not in i])
-with open("./settings.json",'r',encoding='utf-8') as f:
+with open("./src/__STP/settings.json",'r',encoding='utf-8') as f:
     USERSET:dict=json.load(f)
 
 __L='\n'.join('# '+i for i in text2art("Scratch-To-Pygame").splitlines())
