@@ -12,13 +12,10 @@ class Project:
         self.agent:str = self.meta['agent']
         self.platform:str = self.meta['platform']
     
-    def result(self):
-        return {
-            'targets': [Sprite(target) for target in self.targets],
-            'monitors': self.monitors,
-            'extensions': self.extensions,
-            'meta': self.meta
-        }
+    def __repr__(self):
+        class_name = self.__class__.__name__
+        attrs = ', '.join(f'{k}={v!r}' for k, v in vars(self).items())
+        return f'{class_name}({attrs})'
 
 class Sprite:
     def __init__(self, target: dict):
@@ -40,7 +37,11 @@ class Sprite:
         self.videoTransparency = target['videoTransparency']
         self.videoState = target['videoState']
         self.textToSpeechLanguage = target['textToSpeechLanguage']
-
+    
+    def __repr__(self):
+        class_name = self.__class__.__name__
+        attrs = ', '.join(f'{k}={v!r}' for k, v in vars(self).items())
+        return f'{class_name}({attrs})'
 
 class Block:
     def __init__(self, id:str, **kwargs):
@@ -56,5 +57,8 @@ class Block:
         self.y:int|None = kwargs.get('y', None)
         self.isHead:bool = all([self.x, self.y])
 
-        
+    def __repr__(self):
+        class_name = self.__class__.__name__
+        attrs = ', '.join(f'{k}={v!r}' for k, v in vars(self).items())
+        return f'{class_name}({attrs})'    
         
