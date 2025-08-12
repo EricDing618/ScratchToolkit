@@ -1,3 +1,25 @@
+class Project:
+    def __init__(self, pj: dict):
+        self.pj:dict = pj
+
+        self.targets:list[dict] = [Sprite(target) for target in pj['targets']]
+        self.monitors:list[dict] = pj['monitors']
+        self.extensions:list[str] = pj['extensions']
+        self.meta:dict = pj['meta']
+
+        self.semver:str = self.meta['semver']
+        self.vmver:str = self.meta['vm']
+        self.agent:str = self.meta['agent']
+        self.platform:str = self.meta['platform']
+    
+    def result(self):
+        return {
+            'targets': [Sprite(target) for target in self.targets],
+            'monitors': self.monitors,
+            'extensions': self.extensions,
+            'meta': self.meta
+        }
+
 class Sprite:
     def __init__(self, target: dict):
         self.target:dict = target
@@ -7,7 +29,7 @@ class Sprite:
         self.vars:dict[str, list] = target['variables']
         self.lists:dict[str, list] = target['lists']
         self.broadcasts:dict[str, str] = target['broadcasts']
-        self.blocks:dict = target['blocks']
+        self.blocks = {block_id: Block(block_id, **block) for block_id, block in target['blocks'].items()}
         self.comments = target['comments']
         self.currentCostumeIndex = target['currentCostume']
         self.costumes:list[dict] = target['costumes']
@@ -18,6 +40,7 @@ class Sprite:
         self.videoTransparency = target['videoTransparency']
         self.videoState = target['videoState']
         self.textToSpeechLanguage = target['textToSpeechLanguage']
+
 
 class Block:
     def __init__(self, id:str, **kwargs):
