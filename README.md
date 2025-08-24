@@ -58,6 +58,6 @@ pip install -r requirements.txt
 ```
 - 解压并安装`dependencies`分支下的软件（仅支持Windows x64）。
 ## 报错解决
-- `ImportError`：详见**第三方库&软件**。
+- `ImportError`：详见[安装依赖](#安装依赖)。
 
 若这仍不能解决您的问题，请确保该问题没有在issues被提出并解决，然后创建issue并等待解决。
