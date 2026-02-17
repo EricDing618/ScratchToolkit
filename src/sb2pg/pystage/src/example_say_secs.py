@@ -1,0 +1,32 @@
+from pystage.en import Sprite, Stage
+
+stage = Stage()
+sprite = stage.add_a_sprite()
+
+def start():
+    sprite.say("Say World!")
+    sprite.wait(.3)
+    sprite.move(100)
+    sprite.wait(.3)
+    sprite.move(-110)
+    sprite.wait(.3)
+    sprite.move(10)
+    sprite.move(-110)
+    sprite.wait(.3)
+    sprite.move(-110)
+    sprite.wait(.3)
+    sprite.move(110)
+    sprite.wait(.3)
+    sprite.move(-110)
+    sprite.say_for_seconds("Say 2 secs", 2)
+    sprite.wait(1)
+    sprite.think_for_seconds("Think for 2 secs", 2)
+    sprite.move(100)
+    sprite.wait(1)
+    sprite.move(-100)
+    sprite.wait(1)
+    sprite.think("Think World!")
+    sprite.think_for_seconds("Think for 2 secs", 2)
+
+sprite.when_program_starts(start)
+stage.play()

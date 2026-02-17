@@ -1,0 +1,21 @@
+dist/
+build/
+piptest/
+.python-version
+*.py[cod]
+__pycache__/
+*.egg-info
+build.sh
+.idea/
+geckodriver.log
+*.ipynb
+.ipynb_checkpoints
+
+
+# docs
+/docs/source/_static
+*.png
+images/
+sounds/
+
+!tests/src/**
