@@ -464,8 +464,8 @@ def create_project(file_name, project_name, project, directory, language="core",
     print(f"Exporting to: {directory}")
     archive = zipfile.ZipFile(file_name, 'r')
     dp = Path(directory)
-    if dp.exists():
-        raise("Directory must not exist at this point, but it does: {}".format(directory))
+    '''if dp.exists():
+        raise("Directory must not exist at this point, but it does: {}".format(directory))'''
     os.mkdir(dp)
     os.mkdir(dp / "images")
     os.mkdir(dp / "sounds")
@@ -530,8 +530,9 @@ if __name__ == "__main__":
         if dp.exists() and not dp.is_dir:
             print("Output directory exists, but is not a directory. Use -d to specify another directory.")
             sys.exit(1)
-        elif dp.exists() and next(dp.iterdir(), False):
+        elif dp.exists() and any(dp.iterdir()):  # 更清晰的非空判断
             print("Output directory is not empty. Use -d to specify another one.")
             sys.exit(1)
-        elif not dp.exists():
+        else:
+            # 目录不存在 或 存在但为空，都可以执行创建
             create_project(args.file, project_name, project, directory, args.language)
