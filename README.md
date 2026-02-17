@@ -11,9 +11,9 @@
 
 </div>
 
-## STP: Scratch-To-Pygame
+## sb2py: Scratch-To-Pygame
 ### 描述
-- Scratch-To-Pygame（STP）是一个用Python实现的将Scratch转换为Pygame的脚本工具，现已支持`.sb3`文件。
+- Scratch-To-Pygame（sb2py）是一个用Python实现的将Scratch转换为Pygame的脚本工具，基于[pystage/pystage](https://github.com/pystage/pystage)改造，现已支持`.sb3`文件。
 ### 快速使用
 在本仓库目录下使用`cmd`执行：
 ```bash
