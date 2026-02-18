@@ -313,7 +313,7 @@ def get_python(project, language="core", project_link=None):
         # Online Converter, URL: {project_link}
         ''')
     res += textwrap.dedent(f'''\
-            # {project['name']} (pyStage, converted from Scratch 3)
+            # {project['name']}.sb3 -> {project['name']}.py (pyStage, converted from Scratch 3)
 
             from pystage.{language} import {sprite_class}, {stage_class}
 
