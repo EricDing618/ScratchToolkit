@@ -1,4 +1,4 @@
-# mu (pyStage, converted from Scratch 3)
+# mu.sb3 -> mu.py (pyStage, converted from Scratch 3)
 
 from pystage.en import Sprite, Stage
 
